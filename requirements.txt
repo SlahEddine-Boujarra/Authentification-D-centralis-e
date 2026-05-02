@@ -1,0 +1,8 @@
+flask
+requests
+cryptography
+opencv-python
+numpy
+Pillow
+PyJWT
+pyOpenSSL
