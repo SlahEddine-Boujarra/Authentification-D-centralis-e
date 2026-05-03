@@ -1,0 +1,461 @@
+
+=================================================================
+  SERVEUR SSI + ZKP — Authentification Decentralisee
+  HTTPS active | JWT active | Aucune biometrie stockee
+=================================================================
+  DID Serveur  : did:key:f73be650122a029b6497a842a44489d2
+  Adresse      : https://127.0.0.1:5050
+  Base donnees : serveur_db.sqlite
+  Fichier log  : serveur_log.txt
+=================================================================
+
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on https://127.0.0.1:5050
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+
+=================================================================
+  SERVEUR SSI + ZKP — Authentification Decentralisee
+  HTTPS active | JWT active | Aucune biometrie stockee
+=================================================================
+  DID Serveur  : did:key:7115abf382407da4915ec064307ed157
+  Adresse      : https://127.0.0.1:5050
+  Base donnees : serveur_db.sqlite
+  Fichier log  : serveur_log.txt
+=================================================================
+
+ * Debugger is active!
+ * Debugger PIN: 385-065-838
+127.0.0.1 - - [03/May/2026 16:26:20] "[33mGET / HTTP/1.1[0m" 404 -
+127.0.0.1 - - [03/May/2026 16:26:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+
+=================================================================
+  REQUETE : GENERATION TOKEN JWT
+  Horodatage : 2026-05-03 16:39:24
+=================================================================
+  [1] Verification du mot de passe API
+  [2] Token JWT genere avec succes
+      Expiration : 2026-05-03 15:39:24 UTC
+      Token (debut) : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ
+  >>> RESULTAT : [OK] Token JWT emis
+-----------------------------------------------------------------
+127.0.0.1 - - [03/May/2026 16:39:24] "POST /token HTTP/1.1" 200 -
+  [JWT] Token valide
+
+=================================================================
+  REQUETE : ENROLEMENT SSI
+  Horodatage : 2026-05-03 16:40:20
+=================================================================
+  [1] Donnees recues du client
+      DID : did:key:ed9d5bbe2b4cef458c936977b88b5af5
+      Commitment C : 96c9be8aafdef04a59dd77f94634d86409aa7bd05471ab2db44ada0033afeeb3
+      Cle publique PK : -----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQE
+
+  [SECURITE] Le serveur n'a recu AUCUNE donnee biometrique
+  [SECURITE] Pas de template T_u, pas d'alea r, pas d'image
+
+  [2] Verification DID dans la base de donnees
+      Statut : DID disponible
+  [3] Stockage dans SQLite (metadonnees uniquement)
+      Table : enrollments
+      Colonnes : did, commitment, public_key_pem, enrolled_at
+      Biometrie stockee : AUCUNE (jamais)
+  [4] Emission du Verifiable Credential (VC)
+      VC type : ['VerifiableCredential', 'BiometricEnrollmentCredential']
+      VC issuer : did:key:7115abf382407da4915ec064307ed157
+      VC date : 2026-05-03T14:40:20Z
+      VC signature : XrS0U+7LRZgqwFf0gU/rhciPI6T/EHM0q06f7NS/
+  >>> RESULTAT : [OK] Enrolement reussi pour did:key:ed9d5bbe2b4cef458c936977b88b5af5
+-----------------------------------------------------------------
+127.0.0.1 - - [03/May/2026 16:40:20] "POST /enroll HTTP/1.1" 200 -
+  [JWT] Token valide
+
+=================================================================
+  REQUETE : AUTHENTIFICATION ZKP
+  Horodatage : 2026-05-03 16:40:53
+=================================================================
+  [1] Donnees recues du client
+      DID : did:key:296b0ee35590bd651fd29d5b7edcae7f
+      Preuve ZKP (challenge) : 9f48ddf4e0c3b2c8f65d612a2c483750c3aebcc8e3cbc9b31c8edf65cb4f4902
+      Preuve ZKP (timestamp) : 1777819253
+      Preuve ZKP (threshold) : 0.5
+      Preuve ZKP (signature) : DkJD82uMM8Iosy51/LXN41YCS1NwIYPbt+s5PnbU
+      Preuve ZKP (blinded_T) : e30c5e30677bf7f71ac70cdfd60dbee8ce540d4380c9de3a83afa0f8706d1446
+      Preuve ZKP (blinded_r) : d679eb592e935c96bd01404fef98d01e92b792632cfa2be7a59d201997564a21
+      Preuve ZKP (response1) : 453af453050fabccb2570a0cc9c41e15d7eb6c949dae85fce257d403ee974ece
+      Preuve ZKP (response2) : 313be9d3ff24ba80f06f1eb92667f93d445072c4f7c758fd94799a7dffde3615
+      Preuve ZKP (verif_hash) : 62a28ffe6e014e4dd500f3d079eb9f02d827dd389d114b614b512d6c1179fd42
+      VC issuer : did:key:980b599e20151006b20e00bccebb0281
+      VC subject : did:key:296b0ee35590bd651fd29d5b7edcae7f
+
+  [SECURITE] Le serveur n'a recu AUCUNE donnee biometrique
+  [SECURITE] Pas de template T_u, pas d'alea r, pas d'image
+
+  [2] Recherche du DID dans la base de donnees
+      Statut : DID non trouve
+  >>> RESULTAT : [ECHEC] DID inconnu : did:key:296b0ee35590bd651fd29d5b7edcae7f
+-----------------------------------------------------------------
+127.0.0.1 - - [03/May/2026 16:40:53] "[33mPOST /authenticate HTTP/1.1[0m" 404 -
+  [JWT] Token valide
+
+=================================================================
+  REQUETE : AUTHENTIFICATION ZKP
+  Horodatage : 2026-05-03 16:40:59
+=================================================================
+  [1] Donnees recues du client
+      DID : did:key:296b0ee35590bd651fd29d5b7edcae7f
+      Preuve ZKP (challenge) : 2cd861859c0d0c56d7d0f5083f593647d54672a0c882d3248b7e9521641d8f22
+      Preuve ZKP (timestamp) : 1777819259
+      Preuve ZKP (threshold) : 0.5
+      Preuve ZKP (signature) : bkZasEjmBAhaaSzconNtkHT1weWKUBJn3FFV317q
+      Preuve ZKP (blinded_T) : b7111717d5cc77dab703aa65fc453482d5a2b15e714c45f6d15e79faa3f5cd06
+      Preuve ZKP (blinded_r) : c35406aec739d15c310b45893af28d8bc546c770a41b74c4cbd3acd14539643d
+      Preuve ZKP (response1) : f8d5fa2e77c23342618ee281550585661089bdeb8286606deb574a08628b5dd1
+      Preuve ZKP (response2) : b21df8dc1eaeb923425a841a66aa0576bc93e2c678fb830ce3f5b29e52855bb6
+      Preuve ZKP (verif_hash) : 20fd14d50d8ccada196b11de7fc448650bd7c9ff50036134777654911b07e032
+      VC issuer : did:key:980b599e20151006b20e00bccebb0281
+      VC subject : did:key:296b0ee35590bd651fd29d5b7edcae7f
+
+  [SECURITE] Le serveur n'a recu AUCUNE donnee biometrique
+  [SECURITE] Pas de template T_u, pas d'alea r, pas d'image
+
+  [2] Recherche du DID dans la base de donnees
+      Statut : DID non trouve
+  >>> RESULTAT : [ECHEC] DID inconnu : did:key:296b0ee35590bd651fd29d5b7edcae7f
+-----------------------------------------------------------------
+127.0.0.1 - - [03/May/2026 16:40:59] "[33mPOST /authenticate HTTP/1.1[0m" 404 -
+  [JWT] Token valide
+
+=================================================================
+  REQUETE : AUTHENTIFICATION ZKP
+  Horodatage : 2026-05-03 16:41:04
+=================================================================
+  [1] Donnees recues du client
+      DID : did:key:296b0ee35590bd651fd29d5b7edcae7f
+      Preuve ZKP (challenge) : 43c13eb76990d9ef4e03d2dd70029a72509a5206e09276f746845b7b5845f580
+      Preuve ZKP (timestamp) : 1777819264
+      Preuve ZKP (threshold) : 0.5
+      Preuve ZKP (signature) : Bnk4P+LgQsbNKTgvZS5+YyYshS7X4t9FizHvq24g
+      Preuve ZKP (blinded_T) : d5c8b7db8e1c07bc074302ee1a095410d2a93b0f9aeaf0b060b96650184324e1
+      Preuve ZKP (blinded_r) : 97eda1cdd9081bcb3d0827419575ebee5350306ba7a3760fc17813b71febd7c1
+      Preuve ZKP (response1) : 5b9998173f795c14d89f6e673387d5a2514b8cb0dc9293dfd774f1e2cf8c6ccd
+      Preuve ZKP (response2) : 2c767ac34bae90df94dc192b32b69a4bad2db31b387512d5660696a0ab31212e
+      Preuve ZKP (verif_hash) : cfb23dfcb796435cfc7f9aa90053c641b76675eb6a8191bb50764bb18e163ce7
+      VC issuer : did:key:980b599e20151006b20e00bccebb0281
+      VC subject : did:key:296b0ee35590bd651fd29d5b7edcae7f
+
+  [SECURITE] Le serveur n'a recu AUCUNE donnee biometrique
+  [SECURITE] Pas de template T_u, pas d'alea r, pas d'image
+
+  [2] Recherche du DID dans la base de donnees
+      Statut : DID non trouve
+  >>> RESULTAT : [ECHEC] DID inconnu : did:key:296b0ee35590bd651fd29d5b7edcae7f
+-----------------------------------------------------------------
+127.0.0.1 - - [03/May/2026 16:41:04] "[33mPOST /authenticate HTTP/1.1[0m" 404 -
+  [JWT] Token valide
+
+=================================================================
+  REQUETE : ENROLEMENT SSI
+  Horodatage : 2026-05-03 16:41:06
+=================================================================
+  [1] Donnees recues du client
+      DID : did:key:662a3444072853dc4f594af016c6fce4
+      Commitment C : 2ba7aa3a70c5f94537889465d83d464deaf0c6c04560824bce01991226cac024
+      Cle publique PK : -----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQE
+
+  [SECURITE] Le serveur n'a recu AUCUNE donnee biometrique
+  [SECURITE] Pas de template T_u, pas d'alea r, pas d'image
+
+  [2] Verification DID dans la base de donnees
+      Statut : DID disponible
+  [3] Stockage dans SQLite (metadonnees uniquement)
+      Table : enrollments
+      Colonnes : did, commitment, public_key_pem, enrolled_at
+      Biometrie stockee : AUCUNE (jamais)
+  [4] Emission du Verifiable Credential (VC)
+      VC type : ['VerifiableCredential', 'BiometricEnrollmentCredential']
+      VC issuer : did:key:7115abf382407da4915ec064307ed157
+      VC date : 2026-05-03T14:41:06Z
+      VC signature : M8OgyfSIQ9DIQbfP+2mlA+VlCTjcQCpsGZw+V1WV
+  >>> RESULTAT : [OK] Enrolement reussi pour did:key:662a3444072853dc4f594af016c6fce4
+-----------------------------------------------------------------
+127.0.0.1 - - [03/May/2026 16:41:06] "POST /enroll HTTP/1.1" 200 -
+  [JWT] Token valide
+
+=================================================================
+  REQUETE : AUTHENTIFICATION ZKP
+  Horodatage : 2026-05-03 16:41:10
+=================================================================
+  [1] Donnees recues du client
+      DID : did:key:296b0ee35590bd651fd29d5b7edcae7f
+      Preuve ZKP (challenge) : f3c9c38a535348ee9ddc52993a3d4a53a04214c8f9786ec6c8cb76b26ef62e5b
+      Preuve ZKP (timestamp) : 1777819270
+      Preuve ZKP (threshold) : 0.5
+      Preuve ZKP (signature) : LNBLF9+U9qVy3KqDC/2BVkrye3UYb/wBYKyqr8ck
+      Preuve ZKP (blinded_T) : 8ed6ed1050e983214dc5f49b2bb070466fdafdd60e50bd60e56b4c3b237e10d8
+      Preuve ZKP (blinded_r) : 48ff12c59d6b6209c4edd515764cc58111576d40d01a0711dbf796fd523c9218
+      Preuve ZKP (response1) : 70fd5d42ccdb15be79c9c3374bd531f1925dc407f06a6f8f405ac68d8bf3adca
+      Preuve ZKP (response2) : ddc6ad0c26869274a7725b5a6a79c5e9c3e38201c4511b2e22f0c103eb2be4e0
+      Preuve ZKP (verif_hash) : 058ad6f2e1fdcefd809478f750eaa806e7c56e6f16647033f3b98421e302c1c3
+      VC issuer : did:key:980b599e20151006b20e00bccebb0281
+      VC subject : did:key:296b0ee35590bd651fd29d5b7edcae7f
+
+  [SECURITE] Le serveur n'a recu AUCUNE donnee biometrique
+  [SECURITE] Pas de template T_u, pas d'alea r, pas d'image
+
+  [2] Recherche du DID dans la base de donnees
+      Statut : DID non trouve
+  >>> RESULTAT : [ECHEC] DID inconnu : did:key:296b0ee35590bd651fd29d5b7edcae7f
+-----------------------------------------------------------------
+127.0.0.1 - - [03/May/2026 16:41:10] "[33mPOST /authenticate HTTP/1.1[0m" 404 -
+  [JWT] Token valide
+
+=================================================================
+  REQUETE : AUTHENTIFICATION ZKP
+  Horodatage : 2026-05-03 16:41:19
+=================================================================
+  [1] Donnees recues du client
+      DID : did:key:296b0ee35590bd651fd29d5b7edcae7f
+      Preuve ZKP (challenge) : 9d7d57516d569f2680394d580fc21a452991bb9cd0eff54165bb2d97fa4c4da5
+      Preuve ZKP (timestamp) : 1777819279
+      Preuve ZKP (threshold) : 0.5
+      Preuve ZKP (signature) : CXfg3QZN2BrxErlR+BwnIOhhEk4k5pjMzxKn3apc
+      Preuve ZKP (blinded_T) : 9add4272c760be6eea0a1ffbf3872659bd53152798b4c82740aa80da81216a94
+      Preuve ZKP (blinded_r) : ccd5faf4d2de72612bfa8e815b4ad935220f6ffa04054997290bdb996979502a
+      Preuve ZKP (response1) : df44afdefacfab385931c027ede2d7a6ce1e203838805a16dbc811dc7df5baa8
+      Preuve ZKP (response2) : 78665f7af5afbfd649e9d61b827b962efac707157f4015a08164247d02c309df
+      Preuve ZKP (verif_hash) : 2b7a667699e9e44f0788db98dae526c422c09a3b8c7acbcd53e6b5f1569b7572
+      VC issuer : did:key:980b599e20151006b20e00bccebb0281
+      VC subject : did:key:296b0ee35590bd651fd29d5b7edcae7f
+
+  [SECURITE] Le serveur n'a recu AUCUNE donnee biometrique
+  [SECURITE] Pas de template T_u, pas d'alea r, pas d'image
+
+  [2] Recherche du DID dans la base de donnees
+      Statut : DID non trouve
+  >>> RESULTAT : [ECHEC] DID inconnu : did:key:296b0ee35590bd651fd29d5b7edcae7f
+-----------------------------------------------------------------
+127.0.0.1 - - [03/May/2026 16:41:19] "[33mPOST /authenticate HTTP/1.1[0m" 404 -
+  [JWT] Token valide
+
+=================================================================
+  REQUETE : AUTHENTIFICATION ZKP
+  Horodatage : 2026-05-03 16:41:31
+=================================================================
+  [1] Donnees recues du client
+      DID : did:key:296b0ee35590bd651fd29d5b7edcae7f
+      Preuve ZKP (challenge) : 80f61098fff181e091edfc366a5f34f5bc9f5482dc6950d400f72a5bdb717c7e
+      Preuve ZKP (timestamp) : 1777819291
+      Preuve ZKP (threshold) : 0.5
+      Preuve ZKP (signature) : lkLgZ9tt9hpfc56RCEHAyKq0wRM/ht7VTlCSlYH/
+      Preuve ZKP (blinded_T) : b93ca46b3e11db6a4d828254f68d24fbd58de82790346a12675f31aad5fe3087
+      Preuve ZKP (blinded_r) : 245a6f9020d64291bb5ea73f6fb366d03fc24ebf42a2a9827f315c59deef542f
+      Preuve ZKP (response1) : eaf74d01a32de45ef2760ec80b7b55c7630d61d514805144afdfafde3adef454
+      Preuve ZKP (response2) : e2c754c75573f6bb44dae46b235f071e21bd119df6a4e30c12ac8ee0cd219bac
+      Preuve ZKP (verif_hash) : 49dddb279d4f7ff1b1466beef9726a2b7eb120f455f242e852b24ed0847ac4db
+      VC issuer : did:key:980b599e20151006b20e00bccebb0281
+      VC subject : did:key:296b0ee35590bd651fd29d5b7edcae7f
+
+  [SECURITE] Le serveur n'a recu AUCUNE donnee biometrique
+  [SECURITE] Pas de template T_u, pas d'alea r, pas d'image
+
+  [2] Recherche du DID dans la base de donnees
+      Statut : DID non trouve
+  >>> RESULTAT : [ECHEC] DID inconnu : did:key:296b0ee35590bd651fd29d5b7edcae7f
+-----------------------------------------------------------------
+127.0.0.1 - - [03/May/2026 16:41:31] "[33mPOST /authenticate HTTP/1.1[0m" 404 -
+  [JWT] Token valide
+
+=================================================================
+  REQUETE : ENROLEMENT SSI
+  Horodatage : 2026-05-03 16:41:39
+=================================================================
+  [1] Donnees recues du client
+      DID : did:key:8cb7adf3df609703c60169d769e54bb8
+      Commitment C : e4c0874957d975930c09c245f88b1bce65c45f55c71d3a352a62d9d75cb7f9d9
+      Cle publique PK : -----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQE
+
+  [SECURITE] Le serveur n'a recu AUCUNE donnee biometrique
+  [SECURITE] Pas de template T_u, pas d'alea r, pas d'image
+
+  [2] Verification DID dans la base de donnees
+      Statut : DID disponible
+  [3] Stockage dans SQLite (metadonnees uniquement)
+      Table : enrollments
+      Colonnes : did, commitment, public_key_pem, enrolled_at
+      Biometrie stockee : AUCUNE (jamais)
+  [4] Emission du Verifiable Credential (VC)
+      VC type : ['VerifiableCredential', 'BiometricEnrollmentCredential']
+      VC issuer : did:key:7115abf382407da4915ec064307ed157
+      VC date : 2026-05-03T14:41:39Z
+      VC signature : CNsJZd2HU7myjSR9UJTFR3Ufx5F15a9HtBR2ajt2
+  >>> RESULTAT : [OK] Enrolement reussi pour did:key:8cb7adf3df609703c60169d769e54bb8
+-----------------------------------------------------------------
+127.0.0.1 - - [03/May/2026 16:41:39] "POST /enroll HTTP/1.1" 200 -
+  [JWT] Token valide
+
+=================================================================
+  REQUETE : AUTHENTIFICATION ZKP
+  Horodatage : 2026-05-03 16:41:56
+=================================================================
+  [1] Donnees recues du client
+      DID : did:key:8cb7adf3df609703c60169d769e54bb8
+      Preuve ZKP (challenge) : 1105dbaf55f02753276150f9022c1bd9f303cc478324542982149e2d32e1f665
+      Preuve ZKP (timestamp) : 1777819316
+      Preuve ZKP (threshold) : 0.5
+      Preuve ZKP (signature) : FFH+ogPs18Wt8xbBID/pqdyYCBqRSTMiR9b2+MQ3
+      Preuve ZKP (blinded_T) : 913d135922200e2f70072baa73c797c65af73b6a174128ef2625d84f8f186686
+      Preuve ZKP (blinded_r) : 2319c899067037edb2f7f8c82de1908292a3d74654936ec95f28d044ba748ef8
+      Preuve ZKP (response1) : 403f3ab156dc3e73194050a9a9bf2377ba7814d09d36f7ac04b130493a266632
+      Preuve ZKP (response2) : cc50d9be2c377ec33438106518e6242e7950be2b324e6cf775631c4963e1082b
+      Preuve ZKP (verif_hash) : 87f2932d233eabec3948a79dc3927330acd4cedbcb158aa3343fa790a8a9815d
+      VC issuer : did:key:7115abf382407da4915ec064307ed157
+      VC subject : did:key:8cb7adf3df609703c60169d769e54bb8
+
+  [SECURITE] Le serveur n'a recu AUCUNE donnee biometrique
+  [SECURITE] Pas de template T_u, pas d'alea r, pas d'image
+
+  [2] Recherche du DID dans la base de donnees
+      DID trouve : did:key:8cb7adf3df609703c60169d769e54bb8
+      Commitment stocke : e4c0874957d975930c09c245f88b1bce65c45f55c71d3a352a62d9d75cb7f9d9
+      Date enrolement : 2026-05-03T14:41:39Z
+  [3] Verification du Verifiable Credential (VC)
+      VC valide : True
+      VC raison : VC valide
+  [4] Verification de la preuve ZKP (Zero-Knowledge)
+      Etapes de verification :
+        a) Verification du timestamp (anti-rejeu, max 120s)
+        b) Verification du challenge Fiat-Shamir
+        c) Verification du hash de verification
+        d) Verification de la signature RSA-PSS
+      ZKP valide : True
+      ZKP raison : Preuve ZKP valide — Authentification acceptée
+  >>> RESULTAT : [OK] Authentification ACCEPTEE pour did:key:8cb7adf3df609703c60169d769e54bb8
+-----------------------------------------------------------------
+127.0.0.1 - - [03/May/2026 16:41:56] "POST /authenticate HTTP/1.1" 200 -
+
+=================================================================
+  REQUETE : GENERATION TOKEN JWT
+  Horodatage : 2026-05-03 17:05:40
+=================================================================
+  [1] Verification du mot de passe API
+  [2] Token JWT genere avec succes
+      Expiration : 2026-05-03 16:05:40 UTC
+      Token (debut) : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ
+  >>> RESULTAT : [OK] Token JWT emis
+-----------------------------------------------------------------
+127.0.0.1 - - [03/May/2026 17:05:40] "POST /token HTTP/1.1" 200 -
+
+=================================================================
+  REQUETE : GENERATION TOKEN JWT
+  Horodatage : 2026-05-03 17:06:22
+=================================================================
+  [1] Verification du mot de passe API
+  [2] Token JWT genere avec succes
+      Expiration : 2026-05-03 16:06:22 UTC
+      Token (debut) : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ
+  >>> RESULTAT : [OK] Token JWT emis
+-----------------------------------------------------------------
+127.0.0.1 - - [03/May/2026 17:06:22] "POST /token HTTP/1.1" 200 -
+  [JWT] Token valide
+
+=================================================================
+  REQUETE : ENROLEMENT SSI
+  Horodatage : 2026-05-03 17:06:46
+=================================================================
+  [1] Donnees recues du client
+      DID : did:key:7c349e3cec2246d8ecf155cf41f95f7d
+      Commitment C : 66e6fb9af2b42afbf545b5590eb56c576a8cd5fb45cdeef2288cb96e65ebaba3
+      Cle publique PK : -----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQE
+
+  [SECURITE] Le serveur n'a recu AUCUNE donnee biometrique
+  [SECURITE] Pas de template T_u, pas d'alea r, pas d'image
+
+  [2] Verification DID dans la base de donnees
+      Statut : DID disponible
+  [3] Stockage dans SQLite (metadonnees uniquement)
+      Table : enrollments
+      Colonnes : did, commitment, public_key_pem, enrolled_at
+      Biometrie stockee : AUCUNE (jamais)
+  [4] Emission du Verifiable Credential (VC)
+      VC type : ['VerifiableCredential', 'BiometricEnrollmentCredential']
+      VC issuer : did:key:7115abf382407da4915ec064307ed157
+      VC date : 2026-05-03T15:06:46Z
+      VC signature : VLygyxXQ8W5FxBYsI6ZyqRaP/WbW+hbhcGcME80x
+  >>> RESULTAT : [OK] Enrolement reussi pour did:key:7c349e3cec2246d8ecf155cf41f95f7d
+-----------------------------------------------------------------
+127.0.0.1 - - [03/May/2026 17:06:46] "POST /enroll HTTP/1.1" 200 -
+  [JWT] Token valide
+
+=================================================================
+  REQUETE : AUTHENTIFICATION ZKP
+  Horodatage : 2026-05-03 17:07:15
+=================================================================
+  [1] Donnees recues du client
+      DID : did:key:8cb7adf3df609703c60169d769e54bb8
+      Preuve ZKP (challenge) : 586e4d5eab8e4a2ae317053d6104cb5b1bf257fddea456738390a6cb2c432531
+      Preuve ZKP (timestamp) : 1777820835
+      Preuve ZKP (threshold) : 0.5
+      Preuve ZKP (signature) : Ix2vOoaL6iG0I1yyJgvtVuKEHxNMZVgMRS5wkeSV
+      Preuve ZKP (blinded_T) : dbc1af397010f51162047fa0e23478e7ad5e3eed37ed6d67489b01c46722e476
+      Preuve ZKP (blinded_r) : f73529b0796b78cc5fee85d65e611b4555eb37de6ba4b9a34f38b07f3ad2ea8b
+      Preuve ZKP (response1) : 89f860885aa632fb5d3d73c3e0d1a3de13c1342aaf35a6122ce5aa9762d35b4e
+      Preuve ZKP (response2) : de08b36dc571cb0320e1ec54c0bc62fd7e1b7894345415ba7d6e68c65dee6b5e
+      Preuve ZKP (verif_hash) : 1c3e14ccc6e7be1946f2e8e3de5863569bc368d6e22a62bcc04e7bcc98ba935a
+      VC issuer : did:key:7115abf382407da4915ec064307ed157
+      VC subject : did:key:8cb7adf3df609703c60169d769e54bb8
+
+  [SECURITE] Le serveur n'a recu AUCUNE donnee biometrique
+  [SECURITE] Pas de template T_u, pas d'alea r, pas d'image
+
+  [2] Recherche du DID dans la base de donnees
+      DID trouve : did:key:8cb7adf3df609703c60169d769e54bb8
+      Commitment stocke : e4c0874957d975930c09c245f88b1bce65c45f55c71d3a352a62d9d75cb7f9d9
+      Date enrolement : 2026-05-03T14:41:39Z
+  [3] Verification du Verifiable Credential (VC)
+      VC valide : True
+      VC raison : VC valide
+  [4] Verification de la preuve ZKP (Zero-Knowledge)
+      Etapes de verification :
+        a) Verification du timestamp (anti-rejeu, max 120s)
+        b) Verification du challenge Fiat-Shamir
+        c) Verification du hash de verification
+        d) Verification de la signature RSA-PSS
+      ZKP valide : True
+      ZKP raison : Preuve ZKP valide — Authentification acceptée
+  >>> RESULTAT : [OK] Authentification ACCEPTEE pour did:key:8cb7adf3df609703c60169d769e54bb8
+-----------------------------------------------------------------
+127.0.0.1 - - [03/May/2026 17:07:15] "POST /authenticate HTTP/1.1" 200 -
+  [JWT] Token valide
+
+=================================================================
+  REQUETE : ENROLEMENT SSI
+  Horodatage : 2026-05-03 17:07:32
+=================================================================
+  [1] Donnees recues du client
+      DID : did:key:c75e002b285547ebdfba9e8ff0a31f71
+      Commitment C : 7f17fab77473ebbce0d4cae42cd95d8af592021607c6edf38e7de9cf4a57fe13
+      Cle publique PK : -----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQE
+
+  [SECURITE] Le serveur n'a recu AUCUNE donnee biometrique
+  [SECURITE] Pas de template T_u, pas d'alea r, pas d'image
+
+  [2] Verification DID dans la base de donnees
+      Statut : DID disponible
+  [3] Stockage dans SQLite (metadonnees uniquement)
+      Table : enrollments
+      Colonnes : did, commitment, public_key_pem, enrolled_at
+      Biometrie stockee : AUCUNE (jamais)
+  [4] Emission du Verifiable Credential (VC)
+      VC type : ['VerifiableCredential', 'BiometricEnrollmentCredential']
+      VC issuer : did:key:7115abf382407da4915ec064307ed157
+      VC date : 2026-05-03T15:07:32Z
+      VC signature : mkumJTla4lVYPth71vVaieQHNseRZSAb8pzjzjMB
+  >>> RESULTAT : [OK] Enrolement reussi pour did:key:c75e002b285547ebdfba9e8ff0a31f71
+-----------------------------------------------------------------
+127.0.0.1 - - [03/May/2026 17:07:32] "POST /enroll HTTP/1.1" 200 -
