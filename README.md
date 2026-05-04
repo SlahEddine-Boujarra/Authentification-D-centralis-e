@@ -127,11 +127,9 @@ Authentification-D-centralis-e/
 │   ├── biometrics.py                # Capture webcam + extraction template 128D
 │   ├── ssi_wallet.py                # Wallet SSI : DID, clés RSA, VC
 │   ├── zkp_prover.py                # Génération de la preuve ZKP (π)
-│   ├── crypto_client.py             # Utilitaires de chiffrement Fernet (legacy)
-│   ├── wallet_data/                 # Stockage local du wallet
-│   │   ├── <did_hash>.json          #   → Template, aléa, credentials
-│   │   └── <did_hash>_sk.pem        #   → Clé privée RSA
-│   └── local_db/                    # Base de données locale (ancien prototype)
+│   └── wallet_data/                 # Stockage local du wallet
+│       ├── <did_hash>.json          #   → Template, aléa, credentials
+│       └── <did_hash>_sk.pem        #   → Clé privée RSA
 │
 ├── serveur/                         # 🖥️ SERVEUR D'AUTHENTIFICATION
 │   ├── api.py                       # API Flask (HTTPS + JWT)
@@ -144,16 +142,11 @@ Authentification-D-centralis-e/
 │   ├── __init__.py
 │   └── crypto_utils.py              # C = H(T_u || r), SHA-256, distance
 │
-├── main.py                          # ⚠️ Ancien prototype RCPD (non utilisé par SSI+ZKP)
-├── util.py                          # ⚠️ Utilitaires de l'ancien prototype RCPD
-├── test.py                          # Script de test
 ├── requirements.txt                 # Dépendances Python
 ├── run_serveur.bat                  # Lancer le serveur
 ├── run_client.bat                   # Lancer le client
 └── README.md                        # Ce fichier
 ```
-
-> ⚠️ **Note :** `main.py` et `util.py` sont des vestiges de l'ancien prototype (authentification RCPD classique). Le système actuel SSI+ZKP est lancé via `run_serveur.bat` + `run_client.bat`.
 
 ---
 
