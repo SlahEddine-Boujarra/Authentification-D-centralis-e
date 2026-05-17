@@ -1270,3 +1270,902 @@ https://127.0.0.1:5050 "POST /authenticate HTTP/1.1" 200 172
       VC valide : True
   >>> RESULTAT : [OK] Authentification ACCEPTEE — DID : did:key:e389430803dd106f5642eaf8a09bfb72
 -----------------------------------------------------------------
+
+=================================================================
+  CLIENT SSI + ZKP — Authentification Decentralisee
+  Toutes les donnees biometriques restent en LOCAL
+=================================================================
+  Serveur       : https://127.0.0.1:5050
+  Seuil (tau)   : 0.5
+  Fichier log   : client_log.txt
+=================================================================
+
+
+=================================================================
+  OBTENTION TOKEN JWT
+  Horodatage : 2026-05-04 15:34:07
+=================================================================
+  [1] Connexion au serveur https://127.0.0.1:5050/token
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /token HTTP/1.1" 200 153
+  [2] Token JWT recu avec succes
+      Token (debut) : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ
+  >>> RESULTAT : [OK] Connexion au serveur etablie
+-----------------------------------------------------------------
+
+=================================================================
+  CLIENT SSI + ZKP — Authentification Decentralisee
+  Toutes les donnees biometriques restent en LOCAL
+=================================================================
+  Serveur       : https://127.0.0.1:5050
+  Seuil (tau)   : 0.5
+  Fichier log   : client_log.txt
+=================================================================
+
+
+=================================================================
+  OBTENTION TOKEN JWT
+  Horodatage : 2026-05-04 15:34:34
+=================================================================
+  [1] Connexion au serveur https://127.0.0.1:5050/token
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /token HTTP/1.1" 200 153
+  [2] Token JWT recu avec succes
+      Token (debut) : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ
+  >>> RESULTAT : [OK] Connexion au serveur etablie
+-----------------------------------------------------------------
+
+=================================================================
+  CLIENT SSI + ZKP — Authentification Decentralisee
+  Toutes les donnees biometriques restent en LOCAL
+=================================================================
+  Serveur       : https://127.0.0.1:5050
+  Seuil (tau)   : 0.5
+  Fichier log   : client_log.txt
+=================================================================
+
+
+=================================================================
+  OBTENTION TOKEN JWT
+  Horodatage : 2026-05-04 15:36:12
+=================================================================
+  [1] Connexion au serveur https://127.0.0.1:5050/token
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /token HTTP/1.1" 200 153
+  [2] Token JWT recu avec succes
+      Token (debut) : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ
+  >>> RESULTAT : [OK] Connexion au serveur etablie
+-----------------------------------------------------------------
+
+=================================================================
+  CLIENT SSI + ZKP — Authentification Decentralisee
+  Toutes les donnees biometriques restent en LOCAL
+=================================================================
+  Serveur       : https://127.0.0.1:5050
+  Seuil (tau)   : 0.5
+  Fichier log   : client_log.txt
+=================================================================
+
+
+=================================================================
+  OBTENTION TOKEN JWT
+  Horodatage : 2026-05-04 15:37:50
+=================================================================
+  [1] Connexion au serveur https://127.0.0.1:5050/token
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /token HTTP/1.1" 200 153
+  [2] Token JWT recu avec succes
+      Token (debut) : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ
+  >>> RESULTAT : [OK] Connexion au serveur etablie
+-----------------------------------------------------------------
+
+=================================================================
+  CLIENT SSI + ZKP — Authentification Decentralisee
+  Toutes les donnees biometriques restent en LOCAL
+=================================================================
+  Serveur       : https://127.0.0.1:5050
+  Seuil (tau)   : 0.5
+  Fichier log   : client_log.txt
+=================================================================
+
+
+=================================================================
+  OBTENTION TOKEN JWT
+  Horodatage : 2026-05-04 15:44:07
+=================================================================
+  [1] Connexion au serveur https://127.0.0.1:5050/token
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /token HTTP/1.1" 200 153
+  [2] Token JWT recu avec succes
+      Token (debut) : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ
+  >>> RESULTAT : [OK] Connexion au serveur etablie
+-----------------------------------------------------------------
+
+=================================================================
+  AUTHENTIFICATION ZKP (Login)
+  Horodatage : 2026-05-04 15:44:19
+=================================================================
+  [1] Capture nouveau visage + extraction template T'_u (LOCAL)
+      Nouveau template T'_u : vecteur 128D
+      T'_u[0:5] : [0.382578, 0.958667, 0.735338, 0.595256, 0.14358]
+  [2] Chargement du wallet SSI LOCAL
+      DID : did:key:e389430803dd106f5642eaf8a09bfb72
+      Wallet charge : OK
+      Template stocke T_u : vecteur 128D
+      Commitment C : 3a4a425577d3c10a5aff9d4dd8a5c19eed63902dc829d5ed0f02721d8942835e
+      Nombre de VC : 1
+  [3] Matching biometrique LOCAL : d(T_u, T'_u) < tau
+      Distance euclidienne : 0.151776
+      Seuil (tau) : 0.5
+      Matching local : REUSSI
+  [4] Generation de la preuve ZKP (Fiat-Shamir)
+      Challenge : 39ae7bd6415376c118123808dd5bce574f844235cfa9bd263cecc18def5fae00
+      Blinded template : 6195338457e7323bad04e13fcba977069b7b4e44d31961fcf58a7b0c535abc19
+      Blinded random : a65ce6eac8b1d42170b01d2c20e2247ce8249b05cc3d82a18bcbb97e73cc1dc5
+      Response 1 : 16a28519c29f6b8bcaddbf9a6bef5eeb9c959c0c0ad4fea937b20b8d0a1064fd
+      Response 2 : dfcdf7c565a4ef165d165a3b5307aead325f18b7c1c88675a31f343e00799215
+      Verification hash : b3d1b64a35bd277fd5bfd2b0f10f4620652c31c9a0b35f2531cfcffd7e711e44
+      Timestamp : 1777902261
+      Signature RSA : cWVYBEKEus4wqY2uoTvPiW/4TLgze/gtvfQog2kQEoQuZYFDOl
+  [5] Envoi au serveur (AUCUNE biometrie)
+
+  [VIE PRIVEE] Donnees ENVOYEES au serveur :
+      --> Preuve ZKP (pi) — hash aveugles, challenge, reponses, signature
+      --> DID (identifiant)
+      --> Verifiable Credential (VC)
+  [VIE PRIVEE] Donnees restees en LOCAL :
+      (local) Template T_u (128D)
+      (local) Nouveau template T'_u (128D)
+      (local) Alea r (32 octets)
+      (local) Cle privee SK
+      (local) Nonces d'aveuglement (nonce1, nonce2)
+
+  [6] POST https://127.0.0.1:5050/authenticate
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /authenticate HTTP/1.1" 404 67
+  [7] Reponse du serveur
+      Authentifie : False
+      Raison : N/A
+      VC valide : False
+  >>> RESULTAT : [ECHEC] Authentification REJETEE — Inconnue
+-----------------------------------------------------------------
+
+=================================================================
+  ENROLEMENT SSI (Inscription)
+  Horodatage : 2026-05-04 15:44:25
+=================================================================
+  [1] Capture visage + extraction template (LOCAL)
+      Template T_u : vecteur 128D
+      T_u[0:5] : [0.381587, 0.955134, 0.744995, 0.595275, 0.156669]
+  [2] Generation de l'identite SSI
+      DID genere : did:key:12cd6c6bea4396cfa3162617bd131e44
+      Cle publique PK : -----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQE
+      Cle privee SK : (stockee localement, jamais envoyee)
+  [3] Calcul de l'engagement C = SHA-256(T_u || r)
+      Alea r : 32 octets (os.urandom)
+      Commitment C : adb841bf60b033a5f0443470bfd95e164d2bd670e6e9da9216d26b85839a8db5
+  [4] Sauvegarde du wallet LOCAL
+      Fichier wallet : wallet_data/12cd6c6bea4396cfa3162617bd131e44.json
+      Fichier cle : wallet_data/12cd6c6bea4396cfa3162617bd131e44_sk.pem
+  [5] Envoi au serveur (AUCUNE biometrie)
+
+  [VIE PRIVEE] Donnees ENVOYEES au serveur :
+      --> DID (identifiant decentralise)
+      --> Commitment C = H(T_u || r)
+      --> Cle publique PK
+  [VIE PRIVEE] Donnees restees en LOCAL :
+      (local) Template T_u (128D)
+      (local) Alea r (32 octets)
+      (local) Cle privee SK
+
+  [6] POST https://127.0.0.1:5050/enroll
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /enroll HTTP/1.1" 200 1231
+  [7] Verifiable Credential (VC) recu et stocke
+      VC issuer : did:key:61328fc2b1943eb1d6fa7fe6bff6977e
+      VC type : ['VerifiableCredential', 'BiometricEnrollmentCredential']
+      VC date : 2026-05-04T13:44:26Z
+  >>> RESULTAT : [OK] Enrolement reussi — DID : did:key:12cd6c6bea4396cfa3162617bd131e44
+-----------------------------------------------------------------
+
+=================================================================
+  AUTHENTIFICATION ZKP (Login)
+  Horodatage : 2026-05-04 15:44:31
+=================================================================
+  [1] Capture nouveau visage + extraction template T'_u (LOCAL)
+      Nouveau template T'_u : vecteur 128D
+      T'_u[0:5] : [0.382453, 0.960462, 0.731479, 0.59854, 0.153763]
+  [2] Chargement du wallet SSI LOCAL
+      DID : did:key:12cd6c6bea4396cfa3162617bd131e44
+      Wallet charge : OK
+      Template stocke T_u : vecteur 128D
+      Commitment C : adb841bf60b033a5f0443470bfd95e164d2bd670e6e9da9216d26b85839a8db5
+      Nombre de VC : 2
+  [3] Matching biometrique LOCAL : d(T_u, T'_u) < tau
+      Distance euclidienne : 0.157251
+      Seuil (tau) : 0.5
+      Matching local : REUSSI
+  [4] Generation de la preuve ZKP (Fiat-Shamir)
+      Challenge : 30e7cd2137988bfe3d55f7ff929329c4858ca3bd1dcdb3d74c8a9312874d829e
+      Blinded template : 69fa93dabe735e0e46bd632ec3ea25fb0db300d897b6f5d34358c6163b482b64
+      Blinded random : b14fc92bb789f77651b98f8636441124867c527290a0ab770b2e09420c71c193
+      Response 1 : 87842641cd0ab074fbd39b7c0e577d0843b3fbc331a8aeb5add30dc4886e93bc
+      Response 2 : 022988d92cf81015e8f95892c80f1e734444118242102fac8d749594e1ec6bee
+      Verification hash : 9025580581713bf59e1b03556671dc918d3aec6eed5897212570d1fade3ca4d3
+      Timestamp : 1777902271
+      Signature RSA : k2nGF0mSFCXJUEUuGOWHoeQo3vydzDg9aAan+inqfYAFJcadkX
+  [5] Envoi au serveur (AUCUNE biometrie)
+
+  [VIE PRIVEE] Donnees ENVOYEES au serveur :
+      --> Preuve ZKP (pi) — hash aveugles, challenge, reponses, signature
+      --> DID (identifiant)
+      --> Verifiable Credential (VC)
+  [VIE PRIVEE] Donnees restees en LOCAL :
+      (local) Template T_u (128D)
+      (local) Nouveau template T'_u (128D)
+      (local) Alea r (32 octets)
+      (local) Cle privee SK
+      (local) Nonces d'aveuglement (nonce1, nonce2)
+
+  [6] POST https://127.0.0.1:5050/authenticate
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /authenticate HTTP/1.1" 200 172
+  [7] Reponse du serveur
+      Authentifie : True
+      Raison : Preuve ZKP valide — Authentification acceptée
+      VC valide : True
+  >>> RESULTAT : [OK] Authentification ACCEPTEE — DID : did:key:12cd6c6bea4396cfa3162617bd131e44
+-----------------------------------------------------------------
+
+=================================================================
+  CLIENT SSI + ZKP — Authentification Decentralisee
+  Toutes les donnees biometriques restent en LOCAL
+=================================================================
+  Serveur       : https://127.0.0.1:5050
+  Seuil (tau)   : 0.5
+  Fichier log   : client_log.txt
+=================================================================
+
+
+=================================================================
+  OBTENTION TOKEN JWT
+  Horodatage : 2026-05-04 15:45:18
+=================================================================
+  [1] Connexion au serveur https://127.0.0.1:5050/token
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /token HTTP/1.1" 200 153
+  [2] Token JWT recu avec succes
+      Token (debut) : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ
+  >>> RESULTAT : [OK] Connexion au serveur etablie
+-----------------------------------------------------------------
+
+=================================================================
+  ENROLEMENT SSI (Inscription)
+  Horodatage : 2026-05-04 15:45:24
+=================================================================
+  [1] Capture visage + extraction template (LOCAL)
+      Template T_u : vecteur 128D
+      T_u[0:5] : [0.372583, 0.955634, 0.717185, 0.594933, 0.160168]
+  [2] Generation de l'identite SSI
+      DID genere : did:key:f730c45dcf13f402d4a073aba63fba8a
+      Cle publique PK : -----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQE
+      Cle privee SK : (stockee localement, jamais envoyee)
+  [3] Calcul de l'engagement C = SHA-256(T_u || r)
+      Alea r : 32 octets (os.urandom)
+      Commitment C : bcf7f03ab2bb4ac8710009e1d11acdb054e14cc3182c142d4ce6f52eac70b823
+  [4] Sauvegarde du wallet LOCAL
+      Fichier wallet : wallet_data/f730c45dcf13f402d4a073aba63fba8a.json
+      Fichier cle : wallet_data/f730c45dcf13f402d4a073aba63fba8a_sk.pem
+  [5] Envoi au serveur (AUCUNE biometrie)
+
+  [VIE PRIVEE] Donnees ENVOYEES au serveur :
+      --> DID (identifiant decentralise)
+      --> Commitment C = H(T_u || r)
+      --> Cle publique PK
+  [VIE PRIVEE] Donnees restees en LOCAL :
+      (local) Template T_u (128D)
+      (local) Alea r (32 octets)
+      (local) Cle privee SK
+
+  [6] POST https://127.0.0.1:5050/enroll
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /enroll HTTP/1.1" 500 18668
+  >>> RESULTAT : [ECHEC] Serveur injoignable : Expecting value: line 1 column 1 (char 0)
+-----------------------------------------------------------------
+
+=================================================================
+  ENROLEMENT SSI (Inscription)
+  Horodatage : 2026-05-04 15:45:31
+=================================================================
+  [1] Capture visage + extraction template (LOCAL)
+      Template T_u : vecteur 128D
+      T_u[0:5] : [0.37999, 0.956536, 0.721205, 0.580358, 0.153988]
+  [2] Generation de l'identite SSI
+      DID genere : did:key:bc483d04013de98929a6ac3a8ec0deef
+      Cle publique PK : -----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQE
+      Cle privee SK : (stockee localement, jamais envoyee)
+  [3] Calcul de l'engagement C = SHA-256(T_u || r)
+      Alea r : 32 octets (os.urandom)
+      Commitment C : 66318585ea56f4ef0358ea50b762c9a2236e026452d7c4718404d810ee774106
+  [4] Sauvegarde du wallet LOCAL
+      Fichier wallet : wallet_data/bc483d04013de98929a6ac3a8ec0deef.json
+      Fichier cle : wallet_data/bc483d04013de98929a6ac3a8ec0deef_sk.pem
+  [5] Envoi au serveur (AUCUNE biometrie)
+
+  [VIE PRIVEE] Donnees ENVOYEES au serveur :
+      --> DID (identifiant decentralise)
+      --> Commitment C = H(T_u || r)
+      --> Cle publique PK
+  [VIE PRIVEE] Donnees restees en LOCAL :
+      (local) Template T_u (128D)
+      (local) Alea r (32 octets)
+      (local) Cle privee SK
+
+  [6] POST https://127.0.0.1:5050/enroll
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /enroll HTTP/1.1" 500 18668
+  >>> RESULTAT : [ECHEC] Serveur injoignable : Expecting value: line 1 column 1 (char 0)
+-----------------------------------------------------------------
+
+=================================================================
+  ENROLEMENT SSI (Inscription)
+  Horodatage : 2026-05-04 15:45:34
+=================================================================
+  [1] Capture visage + extraction template (LOCAL)
+      Template T_u : vecteur 128D
+      T_u[0:5] : [0.373305, 0.943068, 0.734962, 0.600723, 0.155233]
+  [2] Generation de l'identite SSI
+      DID genere : did:key:66456852befc45ca2bc25d7347f70204
+      Cle publique PK : -----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQE
+      Cle privee SK : (stockee localement, jamais envoyee)
+  [3] Calcul de l'engagement C = SHA-256(T_u || r)
+      Alea r : 32 octets (os.urandom)
+      Commitment C : 6b5a4fefc24bc00e94e00de179b1be4db41fdbcfc40a8dfb360880501408cd1d
+  [4] Sauvegarde du wallet LOCAL
+      Fichier wallet : wallet_data/66456852befc45ca2bc25d7347f70204.json
+      Fichier cle : wallet_data/66456852befc45ca2bc25d7347f70204_sk.pem
+  [5] Envoi au serveur (AUCUNE biometrie)
+
+  [VIE PRIVEE] Donnees ENVOYEES au serveur :
+      --> DID (identifiant decentralise)
+      --> Commitment C = H(T_u || r)
+      --> Cle publique PK
+  [VIE PRIVEE] Donnees restees en LOCAL :
+      (local) Template T_u (128D)
+      (local) Alea r (32 octets)
+      (local) Cle privee SK
+
+  [6] POST https://127.0.0.1:5050/enroll
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /enroll HTTP/1.1" 500 18668
+  >>> RESULTAT : [ECHEC] Serveur injoignable : Expecting value: line 1 column 1 (char 0)
+-----------------------------------------------------------------
+
+=================================================================
+  CLIENT SSI + ZKP — Authentification Decentralisee
+  Toutes les donnees biometriques restent en LOCAL
+=================================================================
+  Serveur       : https://127.0.0.1:5050
+  Seuil (tau)   : 0.5
+  Fichier log   : client_log.txt
+=================================================================
+
+
+=================================================================
+  OBTENTION TOKEN JWT
+  Horodatage : 2026-05-04 15:45:44
+=================================================================
+  [1] Connexion au serveur https://127.0.0.1:5050/token
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /token HTTP/1.1" 200 153
+  [2] Token JWT recu avec succes
+      Token (debut) : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ
+  >>> RESULTAT : [OK] Connexion au serveur etablie
+-----------------------------------------------------------------
+
+=================================================================
+  CLIENT SSI + ZKP — Authentification Decentralisee
+  Toutes les donnees biometriques restent en LOCAL
+=================================================================
+  Serveur       : https://127.0.0.1:5050
+  Seuil (tau)   : 0.5
+  Fichier log   : client_log.txt
+=================================================================
+
+
+=================================================================
+  OBTENTION TOKEN JWT
+  Horodatage : 2026-05-04 15:46:04
+=================================================================
+  [1] Connexion au serveur https://127.0.0.1:5050/token
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /token HTTP/1.1" 200 153
+  [2] Token JWT recu avec succes
+      Token (debut) : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ
+  >>> RESULTAT : [OK] Connexion au serveur etablie
+-----------------------------------------------------------------
+
+=================================================================
+  ENROLEMENT SSI (Inscription)
+  Horodatage : 2026-05-04 15:46:09
+=================================================================
+  [1] Capture visage + extraction template (LOCAL)
+      Template T_u : vecteur 128D
+      T_u[0:5] : [0.364935, 0.937604, 0.723494, 0.610402, 0.15297]
+  [2] Generation de l'identite SSI
+      DID genere : did:key:a117c776998b6bea7559eeb026734682
+      Cle publique PK : -----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQE
+      Cle privee SK : (stockee localement, jamais envoyee)
+  [3] Calcul de l'engagement C = SHA-256(T_u || r)
+      Alea r : 32 octets (os.urandom)
+      Commitment C : 613113113051c8c829558b712a68e92b3aff7cea8650232935bf3ef8af59c2fc
+  [4] Sauvegarde du wallet LOCAL
+      Fichier wallet : wallet_data/a117c776998b6bea7559eeb026734682.json
+      Fichier cle : wallet_data/a117c776998b6bea7559eeb026734682_sk.pem
+  [5] Envoi au serveur (AUCUNE biometrie)
+
+  [VIE PRIVEE] Donnees ENVOYEES au serveur :
+      --> DID (identifiant decentralise)
+      --> Commitment C = H(T_u || r)
+      --> Cle publique PK
+  [VIE PRIVEE] Donnees restees en LOCAL :
+      (local) Template T_u (128D)
+      (local) Alea r (32 octets)
+      (local) Cle privee SK
+
+  [6] POST https://127.0.0.1:5050/enroll
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /enroll HTTP/1.1" 200 1231
+  [7] Verifiable Credential (VC) recu et stocke
+      VC issuer : did:key:1e02828dbe06c685dbc7b7cbdc76fa41
+      VC type : ['VerifiableCredential', 'BiometricEnrollmentCredential']
+      VC date : 2026-05-04T13:46:11Z
+  >>> RESULTAT : [OK] Enrolement reussi — DID : did:key:a117c776998b6bea7559eeb026734682
+-----------------------------------------------------------------
+
+=================================================================
+  AUTHENTIFICATION ZKP (Login)
+  Horodatage : 2026-05-04 15:46:24
+=================================================================
+  [1] Capture nouveau visage + extraction template T'_u (LOCAL)
+      Nouveau template T'_u : vecteur 128D
+      T'_u[0:5] : [0.373292, 0.946377, 0.732459, 0.590142, 0.168666]
+  [2] Chargement du wallet SSI LOCAL
+      DID : did:key:a117c776998b6bea7559eeb026734682
+      Wallet charge : OK
+      Template stocke T_u : vecteur 128D
+      Commitment C : 613113113051c8c829558b712a68e92b3aff7cea8650232935bf3ef8af59c2fc
+      Nombre de VC : 1
+  [3] Matching biometrique LOCAL : d(T_u, T'_u) < tau
+      Distance euclidienne : 0.159391
+      Seuil (tau) : 0.5
+      Matching local : REUSSI
+  [4] Generation de la preuve ZKP (Fiat-Shamir)
+      Challenge : 71f5fa854304c3ffae1bb1304a7dd0a5b7857f0f9411fbc96eb5f0c712ba8b0e
+      Blinded template : d89b843f4317c909c89ac90af37df0a4022c767f18d537b1b73dae69f25bc518
+      Blinded random : d84754df33eeb868999984194d834eaae0df1b12212b717c5230708880906442
+      Response 1 : ddff54b753fb23ae7b7ad05bd2e6a8e7998cc2c5adea35f6e60cc53ff6283e40
+      Response 2 : 0a84fbdc3ff828891175e1daa44172d29f9bffa987799f5b736954bb51964fdf
+      Verification hash : f90189ada90fc1fd8b7db5b6c2c4cbc34e7d0e91c99b44503fc773ebfdca25f4
+      Timestamp : 1777902384
+      Signature RSA : H2LNF/i4hfmb2pr1mc89T1wPrWxm7GdBE+hlH1+35+Ta65aZVY
+  [5] Envoi au serveur (AUCUNE biometrie)
+
+  [VIE PRIVEE] Donnees ENVOYEES au serveur :
+      --> Preuve ZKP (pi) — hash aveugles, challenge, reponses, signature
+      --> DID (identifiant)
+      --> Verifiable Credential (VC)
+  [VIE PRIVEE] Donnees restees en LOCAL :
+      (local) Template T_u (128D)
+      (local) Nouveau template T'_u (128D)
+      (local) Alea r (32 octets)
+      (local) Cle privee SK
+      (local) Nonces d'aveuglement (nonce1, nonce2)
+
+  [6] POST https://127.0.0.1:5050/authenticate
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /authenticate HTTP/1.1" 200 172
+  [7] Reponse du serveur
+      Authentifie : True
+      Raison : Preuve ZKP valide — Authentification acceptée
+      VC valide : True
+  >>> RESULTAT : [OK] Authentification ACCEPTEE — DID : did:key:a117c776998b6bea7559eeb026734682
+-----------------------------------------------------------------
+
+=================================================================
+  ENROLEMENT SSI (Inscription)
+  Horodatage : 2026-05-04 15:47:41
+=================================================================
+  [1] Capture visage + extraction template (LOCAL)
+      Template T_u : vecteur 128D
+      T_u[0:5] : [0.386415, 0.959223, 0.732599, 0.588907, 0.163366]
+  [2] Generation de l'identite SSI
+      DID genere : did:key:1f388e039a0deae24588c9721b247eaf
+      Cle publique PK : -----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQE
+      Cle privee SK : (stockee localement, jamais envoyee)
+  [3] Calcul de l'engagement C = SHA-256(T_u || r)
+      Alea r : 32 octets (os.urandom)
+      Commitment C : d4d1d558836f8c2dea8bfb1163bb063cd1a352fe7d73dbbceaa5737b734e53f4
+  [4] Sauvegarde du wallet LOCAL
+      Fichier wallet : wallet_data/1f388e039a0deae24588c9721b247eaf.json
+      Fichier cle : wallet_data/1f388e039a0deae24588c9721b247eaf_sk.pem
+  [5] Envoi au serveur (AUCUNE biometrie)
+
+  [VIE PRIVEE] Donnees ENVOYEES au serveur :
+      --> DID (identifiant decentralise)
+      --> Commitment C = H(T_u || r)
+      --> Cle publique PK
+  [VIE PRIVEE] Donnees restees en LOCAL :
+      (local) Template T_u (128D)
+      (local) Alea r (32 octets)
+      (local) Cle privee SK
+
+  [6] POST https://127.0.0.1:5050/enroll
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /enroll HTTP/1.1" 200 1231
+  [7] Verifiable Credential (VC) recu et stocke
+      VC issuer : did:key:1e02828dbe06c685dbc7b7cbdc76fa41
+      VC type : ['VerifiableCredential', 'BiometricEnrollmentCredential']
+      VC date : 2026-05-04T13:47:42Z
+  >>> RESULTAT : [OK] Enrolement reussi — DID : did:key:1f388e039a0deae24588c9721b247eaf
+-----------------------------------------------------------------
+
+=================================================================
+  ENROLEMENT SSI (Inscription)
+  Horodatage : 2026-05-04 15:48:08
+=================================================================
+  [1] Capture visage + extraction template (LOCAL)
+      Template T_u : vecteur 128D
+      T_u[0:5] : [0.383802, 0.959863, 0.733371, 0.591329, 0.154366]
+  [2] Generation de l'identite SSI
+      DID genere : did:key:0996b5b9f516f193f4f9fbeff3e1f629
+      Cle publique PK : -----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQE
+      Cle privee SK : (stockee localement, jamais envoyee)
+  [3] Calcul de l'engagement C = SHA-256(T_u || r)
+      Alea r : 32 octets (os.urandom)
+      Commitment C : 69c9f054d792fc3d2e83eb3b98151cb0d88dfac8fd209781707eb55d52cd1b5f
+  [4] Sauvegarde du wallet LOCAL
+      Fichier wallet : wallet_data/0996b5b9f516f193f4f9fbeff3e1f629.json
+      Fichier cle : wallet_data/0996b5b9f516f193f4f9fbeff3e1f629_sk.pem
+  [5] Envoi au serveur (AUCUNE biometrie)
+
+  [VIE PRIVEE] Donnees ENVOYEES au serveur :
+      --> DID (identifiant decentralise)
+      --> Commitment C = H(T_u || r)
+      --> Cle publique PK
+  [VIE PRIVEE] Donnees restees en LOCAL :
+      (local) Template T_u (128D)
+      (local) Alea r (32 octets)
+      (local) Cle privee SK
+
+  [6] POST https://127.0.0.1:5050/enroll
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /enroll HTTP/1.1" 200 1231
+  [7] Verifiable Credential (VC) recu et stocke
+      VC issuer : did:key:1e02828dbe06c685dbc7b7cbdc76fa41
+      VC type : ['VerifiableCredential', 'BiometricEnrollmentCredential']
+      VC date : 2026-05-04T13:48:08Z
+  >>> RESULTAT : [OK] Enrolement reussi — DID : did:key:0996b5b9f516f193f4f9fbeff3e1f629
+-----------------------------------------------------------------
+
+=================================================================
+  AUTHENTIFICATION ZKP (Login)
+  Horodatage : 2026-05-04 15:48:27
+=================================================================
+  [1] Capture nouveau visage + extraction template T'_u (LOCAL)
+      Nouveau template T'_u : vecteur 128D
+      T'_u[0:5] : [0.388257, 0.94295, 0.730895, 0.587675, 0.156688]
+  [2] Chargement du wallet SSI LOCAL
+      DID : did:key:0996b5b9f516f193f4f9fbeff3e1f629
+      Wallet charge : OK
+      Template stocke T_u : vecteur 128D
+      Commitment C : 69c9f054d792fc3d2e83eb3b98151cb0d88dfac8fd209781707eb55d52cd1b5f
+      Nombre de VC : 3
+  [3] Matching biometrique LOCAL : d(T_u, T'_u) < tau
+      Distance euclidienne : 0.136088
+      Seuil (tau) : 0.5
+      Matching local : REUSSI
+  [4] Generation de la preuve ZKP (Fiat-Shamir)
+      Challenge : 5b8d23975da4eefc5664dcee6d975af3b85368f4d1dc12d8d095abd0a95c7d17
+      Blinded template : c2ee7f3b0fff92b5f6fcfcbc2d0333a229cc7732a9c964df4373fbda0e7ee64e
+      Blinded random : cbe8bbc3ab226d1219f9946ceb9cdfc7586cbf62874f907cde27365c0f7c6355
+      Response 1 : 7a61bdffa63de472ed3b3100982010c501846601919a331550f4de0755f9b563
+      Response 2 : 0bae51bd8c23c8173155dde92c46a6b60a977c0935f1682fb0e8322d04f8427d
+      Verification hash : a2124b49467ae136c123286a536787001e9385001d2372c225e658675f641e3d
+      Timestamp : 1777902507
+      Signature RSA : kQyb6NUynuYtrImuZeUTdd9g2z4JWpeLGNEBL0Vs4iju0rcWba
+  [5] Envoi au serveur (AUCUNE biometrie)
+
+  [VIE PRIVEE] Donnees ENVOYEES au serveur :
+      --> Preuve ZKP (pi) — hash aveugles, challenge, reponses, signature
+      --> DID (identifiant)
+      --> Verifiable Credential (VC)
+  [VIE PRIVEE] Donnees restees en LOCAL :
+      (local) Template T_u (128D)
+      (local) Nouveau template T'_u (128D)
+      (local) Alea r (32 octets)
+      (local) Cle privee SK
+      (local) Nonces d'aveuglement (nonce1, nonce2)
+
+  [6] POST https://127.0.0.1:5050/authenticate
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /authenticate HTTP/1.1" 200 172
+  [7] Reponse du serveur
+      Authentifie : True
+      Raison : Preuve ZKP valide — Authentification acceptée
+      VC valide : True
+  >>> RESULTAT : [OK] Authentification ACCEPTEE — DID : did:key:0996b5b9f516f193f4f9fbeff3e1f629
+-----------------------------------------------------------------
+
+=================================================================
+  AUTHENTIFICATION ZKP (Login)
+  Horodatage : 2026-05-04 15:48:32
+=================================================================
+  [1] Capture nouveau visage + extraction template T'_u (LOCAL)
+      Nouveau template T'_u : vecteur 128D
+      T'_u[0:5] : [0.388837, 0.938746, 0.732896, 0.595461, 0.162786]
+  [2] Chargement du wallet SSI LOCAL
+      DID : did:key:0996b5b9f516f193f4f9fbeff3e1f629
+      Wallet charge : OK
+      Template stocke T_u : vecteur 128D
+      Commitment C : 69c9f054d792fc3d2e83eb3b98151cb0d88dfac8fd209781707eb55d52cd1b5f
+      Nombre de VC : 3
+  [3] Matching biometrique LOCAL : d(T_u, T'_u) < tau
+      Distance euclidienne : 0.151059
+      Seuil (tau) : 0.5
+      Matching local : REUSSI
+  [4] Generation de la preuve ZKP (Fiat-Shamir)
+      Challenge : a60933899d0900b3534373b580c283a64a06c09305b35725b58a55cad13730ed
+      Blinded template : efea03dd2db50cd8bdb99552638a0df44d49749d2028fffba82c63b111ba017f
+      Blinded random : 16ff76e68ad700147ca2936a4c5871332ca1daef1e2a39775de61d76cfca224b
+      Response 1 : 0b4019f915bc405487a4ad552322c3b92ee3a45c53230219ff9b69546e44cd71
+      Response 2 : f80cb074baa5518b5653e4c993e55cf18952474316401ffdcb11f71afd5f01d6
+      Verification hash : 7a5066532ac6dd59aaf467407ac56613f66d2cbd19c92d653bbff3ec44929774
+      Timestamp : 1777902512
+      Signature RSA : Ty9kzrt8JSbr8D3YSrcP26Lh6TN6nWh0Vch/QX3bZH1IKaEMj5
+  [5] Envoi au serveur (AUCUNE biometrie)
+
+  [VIE PRIVEE] Donnees ENVOYEES au serveur :
+      --> Preuve ZKP (pi) — hash aveugles, challenge, reponses, signature
+      --> DID (identifiant)
+      --> Verifiable Credential (VC)
+  [VIE PRIVEE] Donnees restees en LOCAL :
+      (local) Template T_u (128D)
+      (local) Nouveau template T'_u (128D)
+      (local) Alea r (32 octets)
+      (local) Cle privee SK
+      (local) Nonces d'aveuglement (nonce1, nonce2)
+
+  [6] POST https://127.0.0.1:5050/authenticate
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /authenticate HTTP/1.1" 200 172
+  [7] Reponse du serveur
+      Authentifie : True
+      Raison : Preuve ZKP valide — Authentification acceptée
+      VC valide : True
+  >>> RESULTAT : [OK] Authentification ACCEPTEE — DID : did:key:0996b5b9f516f193f4f9fbeff3e1f629
+-----------------------------------------------------------------
+
+=================================================================
+  AUTHENTIFICATION ZKP (Login)
+  Horodatage : 2026-05-04 15:48:41
+=================================================================
+  [1] Capture nouveau visage + extraction template T'_u (LOCAL)
+      Nouveau template T'_u : vecteur 128D
+      T'_u[0:5] : [0.392747, 0.951852, 0.711841, 0.591871, 0.146328]
+  [2] Chargement du wallet SSI LOCAL
+      DID : did:key:0996b5b9f516f193f4f9fbeff3e1f629
+      Wallet charge : OK
+      Template stocke T_u : vecteur 128D
+      Commitment C : 69c9f054d792fc3d2e83eb3b98151cb0d88dfac8fd209781707eb55d52cd1b5f
+      Nombre de VC : 3
+  [3] Matching biometrique LOCAL : d(T_u, T'_u) < tau
+      Distance euclidienne : 0.137222
+      Seuil (tau) : 0.5
+      Matching local : REUSSI
+  [4] Generation de la preuve ZKP (Fiat-Shamir)
+      Challenge : 6425c9abf8570e8490a9c4f58c389dea6c9a6100c85dd6cf613c2c980cc539ee
+      Blinded template : 9f8a49a47588a9fa5679504173877f63d70d781d0739fc6e29b329f38e2e23fd
+      Blinded random : 14dc99335d06ec8d71462a1c04c51b16c871b8ad857806e654f0a7534b27ef61
+      Response 1 : 2f587c2eefd2cbaef438dc30da85279e4eec6c083598ceadb1e2db883cbb8a04
+      Response 2 : 70bd7a686d1ce21ff669df1326fe49cbd879eeccc4a32023d5988db0d827550a
+      Verification hash : eb578bb7796e3c57bab3cdb9eee8d8e0e0ce39e3e5686a5202e6a5b11464c01c
+      Timestamp : 1777902522
+      Signature RSA : CMLCscAnvpTsLLB0RJEFqEf32xVNVV7eqSUiRmIgxsQT/kheQb
+  [5] Envoi au serveur (AUCUNE biometrie)
+
+  [VIE PRIVEE] Donnees ENVOYEES au serveur :
+      --> Preuve ZKP (pi) — hash aveugles, challenge, reponses, signature
+      --> DID (identifiant)
+      --> Verifiable Credential (VC)
+  [VIE PRIVEE] Donnees restees en LOCAL :
+      (local) Template T_u (128D)
+      (local) Nouveau template T'_u (128D)
+      (local) Alea r (32 octets)
+      (local) Cle privee SK
+      (local) Nonces d'aveuglement (nonce1, nonce2)
+
+  [6] POST https://127.0.0.1:5050/authenticate
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /authenticate HTTP/1.1" 200 172
+  [7] Reponse du serveur
+      Authentifie : True
+      Raison : Preuve ZKP valide — Authentification acceptée
+      VC valide : True
+  >>> RESULTAT : [OK] Authentification ACCEPTEE — DID : did:key:0996b5b9f516f193f4f9fbeff3e1f629
+-----------------------------------------------------------------
+
+=================================================================
+  CLIENT SSI + ZKP — Authentification Decentralisee
+  Toutes les donnees biometriques restent en LOCAL
+=================================================================
+  Serveur       : https://127.0.0.1:5050
+  Seuil (tau)   : 0.5
+  Fichier log   : client_log.txt
+=================================================================
+
+
+=================================================================
+  OBTENTION TOKEN JWT
+  Horodatage : 2026-05-04 16:03:50
+=================================================================
+  [1] Connexion au serveur https://127.0.0.1:5050/token
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /token HTTP/1.1" 200 153
+  [2] Token JWT recu avec succes
+      Token (debut) : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ
+  >>> RESULTAT : [OK] Connexion au serveur etablie
+-----------------------------------------------------------------
+
+=================================================================
+  ENROLEMENT SSI (Inscription)
+  Horodatage : 2026-05-04 16:04:28
+=================================================================
+  [1] Capture visage + extraction template (LOCAL)
+      Template T_u : vecteur 128D
+      T_u[0:5] : [0.378628, 0.960771, 0.73078, 0.601067, 0.156432]
+  [2] Generation de l'identite SSI
+      DID genere : did:key:20f2597c83bed3e6a0a0133d1e2f1d36
+      Cle publique PK : -----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQE
+      Cle privee SK : (stockee localement, jamais envoyee)
+  [3] Calcul de l'engagement C = SHA-256(T_u || r)
+      Alea r : 32 octets (os.urandom)
+      Commitment C : 6dc720dc87c7a20e9253330cc542d90d806822d289fb19d71af8ae9bcefd8de0
+  [4] Sauvegarde du wallet LOCAL
+      Fichier wallet : wallet_data/20f2597c83bed3e6a0a0133d1e2f1d36.json
+      Fichier cle : wallet_data/20f2597c83bed3e6a0a0133d1e2f1d36_sk.pem
+  [5] Envoi au serveur (AUCUNE biometrie)
+
+  [VIE PRIVEE] Donnees ENVOYEES au serveur :
+      --> DID (identifiant decentralise)
+      --> Commitment C = H(T_u || r)
+      --> Cle publique PK
+  [VIE PRIVEE] Donnees restees en LOCAL :
+      (local) Template T_u (128D)
+      (local) Alea r (32 octets)
+      (local) Cle privee SK
+
+  [6] POST https://127.0.0.1:5050/enroll
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /enroll HTTP/1.1" 200 1231
+  [7] Verifiable Credential (VC) recu et stocke
+      VC issuer : did:key:fd08ccd9d0d5588e1a8df67f706c49cf
+      VC type : ['VerifiableCredential', 'BiometricEnrollmentCredential']
+      VC date : 2026-05-04T14:04:31Z
+  >>> RESULTAT : [OK] Enrolement reussi — DID : did:key:20f2597c83bed3e6a0a0133d1e2f1d36
+-----------------------------------------------------------------
+
+=================================================================
+  AUTHENTIFICATION ZKP (Login)
+  Horodatage : 2026-05-04 16:05:00
+=================================================================
+  [1] Capture nouveau visage + extraction template T'_u (LOCAL)
+      Nouveau template T'_u : vecteur 128D
+      T'_u[0:5] : [0.388479, 0.946167, 0.71831, 0.60611, 0.163229]
+  [2] Chargement du wallet SSI LOCAL
+      DID : did:key:20f2597c83bed3e6a0a0133d1e2f1d36
+      Wallet charge : OK
+      Template stocke T_u : vecteur 128D
+      Commitment C : 6dc720dc87c7a20e9253330cc542d90d806822d289fb19d71af8ae9bcefd8de0
+      Nombre de VC : 1
+  [3] Matching biometrique LOCAL : d(T_u, T'_u) < tau
+      Distance euclidienne : 0.160129
+      Seuil (tau) : 0.5
+      Matching local : REUSSI
+  [4] Generation de la preuve ZKP (Fiat-Shamir)
+      Challenge : 570e09fd159fa086de4bcea546fbb7fdd351b24bc6ee356150b3098e8376e27a
+      Blinded template : 452c9dbe7085b3b18d9d23ef1db4d09c23da312bbb934faec22546596e36d407
+      Blinded random : 1c5de2c17ecd488f2729f20a9a9b81e0638ba8fb2b514b0993c4de7436ff76bc
+      Response 1 : ec205950feffad2671e1e49ceaab0ec342a3e4870c0a68ca8293007412a34dd6
+      Response 2 : 1b6134925149cfafe47045c2468ce67dfd2a9c8e85d31cddc5d177db7b57b329
+      Verification hash : f758ca23493f91bdda3aaf61762d01ad36db9fa9b00d3b1470c22fbb7e560235
+      Timestamp : 1777903500
+      Signature RSA : n4teLiXjPL/p5px4kULdyDENkFVlPfd7D0TurFa2mVS0tZWYWs
+  [5] Envoi au serveur (AUCUNE biometrie)
+
+  [VIE PRIVEE] Donnees ENVOYEES au serveur :
+      --> Preuve ZKP (pi) — hash aveugles, challenge, reponses, signature
+      --> DID (identifiant)
+      --> Verifiable Credential (VC)
+  [VIE PRIVEE] Donnees restees en LOCAL :
+      (local) Template T_u (128D)
+      (local) Nouveau template T'_u (128D)
+      (local) Alea r (32 octets)
+      (local) Cle privee SK
+      (local) Nonces d'aveuglement (nonce1, nonce2)
+
+  [6] POST https://127.0.0.1:5050/authenticate
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /authenticate HTTP/1.1" 200 172
+  [7] Reponse du serveur
+      Authentifie : True
+      Raison : Preuve ZKP valide — Authentification acceptée
+      VC valide : True
+  >>> RESULTAT : [OK] Authentification ACCEPTEE — DID : did:key:20f2597c83bed3e6a0a0133d1e2f1d36
+-----------------------------------------------------------------
+
+=================================================================
+  AUTHENTIFICATION ZKP (Login)
+  Horodatage : 2026-05-04 16:05:27
+=================================================================
+  [1] Capture nouveau visage + extraction template T'_u (LOCAL)
+      Nouveau template T'_u : vecteur 128D
+      T'_u[0:5] : [0.380667, 0.948597, 0.741105, 0.590943, 0.158965]
+  [2] Chargement du wallet SSI LOCAL
+      DID : did:key:20f2597c83bed3e6a0a0133d1e2f1d36
+      Wallet charge : OK
+      Template stocke T_u : vecteur 128D
+      Commitment C : 6dc720dc87c7a20e9253330cc542d90d806822d289fb19d71af8ae9bcefd8de0
+      Nombre de VC : 1
+  [3] Matching biometrique LOCAL : d(T_u, T'_u) < tau
+      Distance euclidienne : 0.149761
+      Seuil (tau) : 0.5
+      Matching local : REUSSI
+  [4] Generation de la preuve ZKP (Fiat-Shamir)
+      Challenge : e5313d3cfe90e80cfe71e2c39456bfcd46eb3cd23abdca5032925298df696775
+      Blinded template : 772d80c1a86401e0e0715660486ce6f598eed4070364d49c663cd4af355a36cf
+      Blinded random : 5f7b50a1e3823872fc8dd4e41e4b5162ed9e80a33fa00799d980766447ae020e
+      Response 1 : 7a9e538b7b18068ff0b68a2d53a14bd3602621afa3cb455dffeed7a67bbaebc5
+      Response 2 : 0e16740baa070f695cbf93ef3afdca56ed57ce83013411f46328617a724390cf
+      Verification hash : eeba28490905c9275cf66dc2b00b139f79cc8d0ab3d2f1a85b3384dda9ffa6a5
+      Timestamp : 1777903527
+      Signature RSA : aEoe6rpcKKepRobKnWsnt3fXhmDi90+qs/qz9sfQdhoi3MkxcM
+  [5] Envoi au serveur (AUCUNE biometrie)
+
+  [VIE PRIVEE] Donnees ENVOYEES au serveur :
+      --> Preuve ZKP (pi) — hash aveugles, challenge, reponses, signature
+      --> DID (identifiant)
+      --> Verifiable Credential (VC)
+  [VIE PRIVEE] Donnees restees en LOCAL :
+      (local) Template T_u (128D)
+      (local) Nouveau template T'_u (128D)
+      (local) Alea r (32 octets)
+      (local) Cle privee SK
+      (local) Nonces d'aveuglement (nonce1, nonce2)
+
+  [6] POST https://127.0.0.1:5050/authenticate
+Starting new HTTPS connection (1): 127.0.0.1:5050
+https://127.0.0.1:5050 "POST /authenticate HTTP/1.1" 200 172
+  [7] Reponse du serveur
+      Authentifie : True
+      Raison : Preuve ZKP valide — Authentification acceptée
+      VC valide : True
+  >>> RESULTAT : [OK] Authentification ACCEPTEE — DID : did:key:20f2597c83bed3e6a0a0133d1e2f1d36
+-----------------------------------------------------------------
+
+=================================================================
+  CONSULTATION WALLET SSI
+  Horodatage : 2026-05-04 16:06:13
+=================================================================
+  [1] Nombre d'identites : 1
+      Identite 1 : did:key:20f2597c83bed3e6a0a0133d1e2f1d36
+  >>> RESULTAT : [OK] 1 identite(s) dans le wallet
+-----------------------------------------------------------------
